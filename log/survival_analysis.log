@@ -1,0 +1,1608 @@
+-----------------------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  /Users/hteza/Desktop/Class/RACE626/Assignment_2_SA/Assignment II/To_submit/survival_analysis.log
+  log type:  text
+ opened on:  15 Mar 2020, 20:41:37
+
+. do "/var/folders/s9/1_58_r7d14q02tq0nct3crv00000gn/T//SD80466.000000"
+
+. use "/Users/hteza/Desktop/Class/RACE626/Assignment_2_SA/Assignment II/merged data for KT project.dta"
+(recipient form)
+
+. d
+
+Contains data from /Users/hteza/Desktop/Class/RACE626/Assignment_2_SA/Assignment II/merged data for KT project.dta
+  obs:         4,915                          recipient form
+ vars:           124                          10 Mar 2020 11:38
+-----------------------------------------------------------------------------------------------------------------------
+              storage   display    value
+variable name   type    format     label      variable label
+-----------------------------------------------------------------------------------------------------------------------
+no              int     %3.0f                 ID
+subjid          long    %7.0f                 Subject ID
+sexr            byte    %10.0f     epd1       Sex of recipient
+datebirt        long    %d                    Date of birth
+ager            int     %3.0f                 Age of recipient
+bloodgrr        byte    %10.0f     epd2       Blood Gr. of recipient
+pretrans        byte    %10.0f     epd3       Pre-transplantation
+datepret        long    %d                    date of pre-transplantation
+hbs             byte    %11.0f     epd4       HBS Ag of recipient
+athbsr          byte    %11.0f     epd4       Anti HBS of recipient
+anthcv          byte    %11.0f     epd4       Anti HCV of recipient
+iggr            byte    %11.0f     epd4       IgG of recipient
+igmr            byte    %11.0f     epd4       IgM of recipient
+hiv             byte    %11.0f     epd4       Anti HIV of recipient
+caesrd          byte    %32.0f     epd5       Cause of ESRD
+mode            byte    %14.0f     epd6       mode of dialysis
+durdialy        double  %3.0f                 Duration of dialysis
+dmr             byte    %10.0f     epd3       DM at enrollment
+autcell         byte    %11.0f     epd4       Autoantibody T cell
+tyatcell        byte    %10.0f     epd7       specify type of auto T cell
+aubcell         byte    %11.0f     epd4       Autoantibody B cell
+tyabcell        byte    %10.0f     epd7       specify type of auto B cell
+pra             double  %3.0f                 PRA - last
+hlamatch        byte    %16.0f     epd8       Type of HLA matching
+nomiss          byte    %2.0f                 Number of mismatch
+totalmat        byte    %1.0f                 Total number of mismatch
+hlamiss         byte    %1.0f                 Number of HLA-A mismatch
+hlbmiss         byte    %1.0f                 Number of HLA-B mismatch
+hldrmiss        byte    %1.0f                 Number of HLA-DR mismatch
+height          double  %6.2f                 Height
+weight          double  %6.2f                 Weight
+year            float   %9.0g                 
+dna             byte    %10.0f     epd3       DNA
+sero            byte    %10.0f     epd3       Serology
+dateop          long    %d                    Date of operation
+typedonor       byte    %1.0f      epd1       type of donor
+relate          byte    %2.0f      epd2       Relationship between donor and recipient
+cit             double  %5.2f                 Cold ischemic time
+wit             byte    %2.0f                 Warm ischemic time
+induce          byte    %1.0f      epd3       Induction
+spind           byte    %1.0f      epd4       if yes, specify
+dgf             byte    %1.0f      epd3       Delayed graft function
+bestcr          double  %5.2f                 Best Cr
+datebcr         long    %d                    date of Best Cr
+discr           double  %5.2f                 Discharge Cr
+datedis         long    %d                    date of discharge
+imcomp          byte    %1.0f      epd3       Immediate complication
+ar              byte    %1.0f      epd3       1. Acute rejection
+datear          long    %d                    date of Acute rejection
+uti             byte    %1.0f      epd3       2. UTI
+dateuti         long    %d                    date of UTI
+cit1            double  %5.2f                 Cold ischemic time @
+wit1            byte    %2.0f                 Warm ischemic time @
+agegr           byte    %12.0g     agegr      Age Groups
+datebirt1       float   %d                    Date of Birth
+datepret1       float   %d                    Date of Pre-transplantation
+year1           float   %9.0g                 
+dateop1         float   %d                    Date of Operation
+datebcr1        float   %d                    Date of Best CR
+datedis1        float   %d                    Date of Discharge
+datear1         float   %d                    Date of Acute Rejection
+dateuti1        float   %d                    Date of UTI
+visit           float   %9.0g                 
+datevisit       long    %d                    Date of visit
+wt              double  %6.2f                 Weight
+sbp             int     %3.0f                 SBP
+dbp             int     %3.0f                 DBP
+cr              double  %6.2f                 Creatinine
+glu             double  %6.2f                 Glucose
+chol            int     %3.0f                 Cholesterol
+tg              int     %4.0f                 TG
+sgot            int     %4.0f                 AST/SGOT
+sgpt            int     %3.0f                 ALT/SGPT
+proturia        byte    %11.0f     fol1       Proteinuria
+uria24          double  %7.2f                 24 hr urine protein
+hematur         byte    %11.0f     fol1       Hematuria
+crclear         double  %6.2f                 Creatinine Clearance
+csa             byte    %10.0f     fol2       Neoral(Cyclosporin)
+csadose         double  %5.1f                 specify dose
+pred            byte    %10.0f     fol2       Prednisolone
+preddose        double  %5.1f                 specify dose
+imuran          byte    %10.0f     fol2       Imuran(Azathioprine)
+imudose         double  %5.1f                 specify dose
+mmf             byte    %10.0f     fol2       Cellcept(MMF)
+mmfdose         double  %6.1f                 specify dose
+fk506           byte    %10.0f     fol2       Prograft(FK-506)
+fkdose          double  %5.1f                 specify dose
+rapar           byte    %10.0f     fol2       Raparmune
+rapdose         double  %5.1f                 specify dose
+csalevel        double  %6.1f                 CSA level
+c2level         double  %6.1f                 C2 level
+fklevel         double  %6.1f                 FK 506 level
+cardil          byte    %10.0f     fol2       Diltiazem
+keto            byte    %10.0f     fol2       Ketoconazole
+acei            byte    %10.0f     fol2       ACEI
+aiirb           byte    %10.0f     fol2       AIIRB
+hmgcoa          byte    %10.0f     fol2       HMGCoA
+dmdrug          byte    %10.0f     fol2       DM drug
+otherht         byte    %10.0f     fol2       HT drug
+spnum           byte    %2.0f                 specify number of HT
+fibrate         byte    %10.0f     fol2       Fibrate drug
+bnaff           byte    %13.0f     fol3       Bnaff classification
+gf              byte    %16.0f     fol4       Graft outcome
+dategf          long    %d                    Date of graft failue
+causegf         byte    %30.0f     fol5       Cause of GF
+othgf           str25   %25s                  specify other cause of GF
+death           byte    %16.0f     fol6       Death outcome
+datedie         long    %d                    Date of death
+caused          byte    %32.0f     fol7       Cause of death
+othdie          str25   %25s                  specify other cause of death
+complica        byte    %10.0f     fol2       Complication
+spcomp          byte    %22.0f     fol8       specify complication
+othcomp         str31   %31s                  specify other complication
+rapamun         double  %6.1f                 Rapamune level@
+sbp1            float   %9.0g                 
+dbp1            float   %9.0g                 
+highchol        float   %14.0g     hchol      high cholesterol
+diagdm          float   %9.0g      dm         DM diagnosis
+hyper           float   %9.0g      dm         
+datevisit1      float   %d                    Date of Visit
+year2           float   %9.0g                 
+dategf1         float   %d                    Date of Graft Failure
+datedie1        float   %d                    Date of Death
+_merge          byte    %23.0g     _merge     
+-----------------------------------------------------------------------------------------------------------------------
+Sorted by: 
+
+. sort subjid datevisit1
+
+. 
+. ** decalre this dataset if for survival analysis
+. * multiple event -> censoring
+. * one subject multiple record , by subjid
+. * orgin is the time when subject becomes at risk of graft failure, so date of operation
+. * failure event is graft faiure ( gf =2 )
+. 
+. stset datevisit1, id(subjid) origin(time dateop1) failure(gf==2) scale(30.5)
+
+                id:  subjid
+     failure event:  gf == 2
+obs. time interval:  (datevisit1[_n-1], datevisit1]
+ exit on or before:  failure
+    t for analysis:  (time-origin)/30.5
+            origin:  time dateop1
+
+------------------------------------------------------------------------------
+      4,915  total observations
+         43  observations begin on or after (first) failure
+------------------------------------------------------------------------------
+      4,872  observations remaining, representing
+        500  subjects
+         59  failures in single-failure-per-subject data
+ 25,977.639  total analysis time at risk and under observation
+                                                at risk from t =         0
+                                     earliest observed entry t =         0
+                                          last observed exit t =  120.1311
+
+. 
+. * list subjid if _st==0 
+. 
+. list subjid dateop1 datevisit1 _st _t gf if subjid==3125636 
+
+      +----------------------------------------------------------------------+
+      |  subjid     dateop1   datevis~1   _st          _t                 gf |
+      |----------------------------------------------------------------------|
+3558. | 3125636   02dec1998   22dec1998     1    .6557377        1. function |
+3559. | 3125636   02dec1998   18feb1999     1    2.557377        1. function |
+3560. | 3125636   02dec1998   25mar1999     1    3.704918        1. function |
+3561. | 3125636   02dec1998   29apr1999     1    4.852459        1. function |
+3562. | 3125636   02dec1998   10jun1999     1   6.2295082        1. function |
+      |----------------------------------------------------------------------|
+3563. | 3125636   02dec1998   08jul1999     1    7.147541        1. function |
+3564. | 3125636   02dec1998   23sep1999     1   9.6721311        1. function |
+3565. | 3125636   02dec1998   14oct1999     1   10.360656   2. graft failure |
+3566. | 3125636   02dec1998   16dec1999     0           .   2. graft failure |
+3567. | 3125636   02dec1998   13jan2000     0           .   2. graft failure |
+      +----------------------------------------------------------------------+
+
+. list subjid dateop1 datevisit1 _st _t gf if subjid==3422842
+
+      +----------------------------------------------------------------------+
+      |  subjid     dateop1   datevis~1   _st          _t                 gf |
+      |----------------------------------------------------------------------|
+4579. | 3422842   09may2001   14jun2001     1   1.1803279        1. function |
+4580. | 3422842   09may2001   25jun2001     1   1.5409836   3. loss followup |
+      +----------------------------------------------------------------------+
+
+. 
+. sts list, fail at ( 24 60 )
+
+         failure _d:  gf == 2
+   analysis time _t:  (datevisit1-origin)/30.5
+             origin:  time dateop1
+                 id:  subjid
+
+              Beg.                      Failure       Std.
+    Time     Total     Fail             Function     Error     [95% Conf. Int.]
+-------------------------------------------------------------------------------
+      24       342       17              0.0405    0.0097     0.0253    0.0645
+      60       226       17              0.0964    0.0160     0.0694    0.1331
+-------------------------------------------------------------------------------
+Note: Failure function is calculated over full data and evaluated at indicated
+      times; it is not calculated from aggregates shown at left.
+
+. *sts graph, fail
+. 
+. stsum
+
+         failure _d:  gf == 2
+   analysis time _t:  (datevisit1-origin)/30.5
+             origin:  time dateop1
+                 id:  subjid
+
+         |               incidence       no. of    |------ Survival time -----|
+         | time at risk     rate        subjects        25%       50%       75%
+---------+---------------------------------------------------------------------
+   total |  25977.63934   .0022712           500   97.08197         .         .
+
+. strate
+
+         failure _d:  gf == 2
+   analysis time _t:  (datevisit1-origin)/30.5
+             origin:  time dateop1
+                 id:  subjid
+
+Estimated rates and lower/upper bounds of 95% confidence intervals
+(4872 records included in the analysis)
+
+  +--------------------------------------------------+
+  |  D         Y        Rate       Lower       Upper |
+  |--------------------------------------------------|
+  | 59   2.6e+04   0.0022712   0.0017597   0.0029314 |
+  +--------------------------------------------------+
+
+
+. 
+. **************
+. 
+. * Univariate
+. 
+. * age gp
+. 
+. sts test agegr
+
+         failure _d:  gf == 2
+   analysis time _t:  (datevisit1-origin)/30.5
+             origin:  time dateop1
+                 id:  subjid
+
+
+Log-rank test for equality of survivor functions
+
+             |   Events         Events
+agegr        |  observed       expected
+-------------+-------------------------
+Age 10 to 36 |        20          22.50
+Age 37 to 47 |        22          20.16
+Age 48 to 70 |        15          14.34
+-------------+-------------------------
+Total        |        57          57.00
+
+                   chi2(2) =       0.48
+                   Pr>chi2 =     0.7879
+
+. *sts graph, fail by (agegr)
+. 
+. * sex receive
+. 
+. sts test sexr
+
+         failure _d:  gf == 2
+   analysis time _t:  (datevisit1-origin)/30.5
+             origin:  time dateop1
+                 id:  subjid
+
+
+Log-rank test for equality of survivor functions
+
+          |   Events         Events
+sexr      |  observed       expected
+----------+-------------------------
+1. male   |        37          37.63
+2. female |        22          21.37
+----------+-------------------------
+Total     |        59          59.00
+
+                chi2(1) =       0.03
+                Pr>chi2 =     0.8651
+
+. *sts graph, fail by (sexr)
+. 
+. * abo group
+. 
+. sts test bloodgrr
+
+         failure _d:  gf == 2
+   analysis time _t:  (datevisit1-origin)/30.5
+             origin:  time dateop1
+                 id:  subjid
+
+
+Log-rank test for equality of survivor functions
+
+           |   Events         Events
+bloodgrr   |  observed       expected
+-----------+-------------------------
+1. A       |        11          10.50
+2. B       |        20          19.70
+3. AB      |         2           2.41
+4. O       |        20          22.07
+9. missing |         6           4.32
+-----------+-------------------------
+Total      |        59          59.00
+
+                 chi2(4) =       0.94
+                 Pr>chi2 =     0.9182
+
+. *sts graph, fail by (bloodgrr)
+. 
+. * sex of the donor
+. 
+. sts test typedonor
+
+         failure _d:  gf == 2
+   analysis time _t:  (datevisit1-origin)/30.5
+             origin:  time dateop1
+                 id:  subjid
+
+
+Log-rank test for equality of survivor functions
+
+          |   Events         Events
+typedonor |  observed       expected
+----------+-------------------------
+1. male   |        23          19.71
+2. female |        35          38.29
+----------+-------------------------
+Total     |        58          58.00
+
+                chi2(1) =       0.84
+                Pr>chi2 =     0.3596
+
+. sts graph, fail by (typedonor)
+
+         failure _d:  gf == 2
+   analysis time _t:  (datevisit1-origin)/30.5
+             origin:  time dateop1
+                 id:  subjid
+
+. 
+. * hla matching
+. 
+. sts test hlamatch 
+
+         failure _d:  gf == 2
+   analysis time _t:  (datevisit1-origin)/30.5
+             origin:  time dateop1
+                 id:  subjid
+
+
+Log-rank test for equality of survivor functions
+
+                 |   Events         Events
+hlamatch         |  observed       expected
+-----------------+-------------------------
+1. HLA identical |         2           9.12
+2. One haplotype |        31          24.62
+3. Miss match    |        25          24.26
+-----------------+-------------------------
+Total            |        58          58.00
+
+                       chi2(2) =       7.25
+                       Pr>chi2 =     0.0266
+
+. *sts graph, fail by (hlamatch)
+. stsum, by(hlamatch)
+
+         failure _d:  gf == 2
+   analysis time _t:  (datevisit1-origin)/30.5
+             origin:  time dateop1
+                 id:  subjid
+
+         |               incidence       no. of    |------ Survival time -----|
+hlamatch | time at risk     rate        subjects        25%       50%       75%
+---------+---------------------------------------------------------------------
+1. HLA i |  3549.639344   .0005634            63          .         .         .
+2. One h |  10242.68852   .0030265           191   87.90164         .         .
+ 3. Miss |  10871.67213   .0022996           228   91.96721         .         .
+---------+---------------------------------------------------------------------
+   total |        24664   .0023516           482   94.55738         .         .
+
+. stcox i.hlamatch, nolog
+
+         failure _d:  gf == 2
+   analysis time _t:  (datevisit1-origin)/30.5
+             origin:  time dateop1
+                 id:  subjid
+
+Cox regression -- no ties
+
+No. of subjects =          482                  Number of obs    =       4,687
+No. of failures =           58
+Time at risk    =        24664
+                                                LR chi2(2)       =        9.73
+Log likelihood  =   -304.01904                  Prob > chi2      =      0.0077
+
+-----------------------------------------------------------------------------------
+               _t | Haz. Ratio   Std. Err.      z    P>|z|     [95% Conf. Interval]
+------------------+----------------------------------------------------------------
+         hlamatch |
+2. One haplotype  |   5.754036   4.199213     2.40   0.016     1.376505    24.05289
+   3. Miss match  |   4.726303   3.479613     2.11   0.035     1.116471    20.00763
+-----------------------------------------------------------------------------------
+
+. 
+. * hiv receive
+. 
+. tab hiv
+
+Anti HIV of |
+  recipient |      Freq.     Percent        Cum.
+------------+-----------------------------------
+2. negative |      4,667       94.95       94.95
+ 9. missing |        248        5.05      100.00
+------------+-----------------------------------
+      Total |      4,915      100.00
+
+. 
+. * hbs antigen
+. 
+. sts test hbs
+
+         failure _d:  gf == 2
+   analysis time _t:  (datevisit1-origin)/30.5
+             origin:  time dateop1
+                 id:  subjid
+
+
+Log-rank test for equality of survivor functions
+
+            |   Events         Events
+hbs         |  observed       expected
+------------+-------------------------
+1. positive |         2           4.56
+2. negative |        55          52.44
+------------+-------------------------
+Total       |        57          57.00
+
+                  chi2(1) =       1.56
+                  Pr>chi2 =     0.2114
+
+. *sts graph, fail by (hbs)
+. 
+. * hbs antibody
+. 
+. sts test athbsr
+
+         failure _d:  gf == 2
+   analysis time _t:  (datevisit1-origin)/30.5
+             origin:  time dateop1
+                 id:  subjid
+
+
+Log-rank test for equality of survivor functions
+
+            |   Events         Events
+athbsr      |  observed       expected
+------------+-------------------------
+1. positive |        21          22.43
+2. negative |        32          30.80
+9. missing  |         6           5.77
+------------+-------------------------
+Total       |        59          59.00
+
+                  chi2(2) =       0.15
+                  Pr>chi2 =     0.9286
+
+. *sts graph, fail by (athbsr)
+. 
+. * hcv antibody
+. 
+. sts test anthcv
+
+         failure _d:  gf == 2
+   analysis time _t:  (datevisit1-origin)/30.5
+             origin:  time dateop1
+                 id:  subjid
+
+
+Log-rank test for equality of survivor functions
+
+            |   Events         Events
+anthcv      |  observed       expected
+------------+-------------------------
+1. positive |         9           3.45
+2. negative |        47          49.86
+9. missing  |         3           5.69
+------------+-------------------------
+Total       |        59          59.00
+
+                  chi2(2) =      10.36
+                  Pr>chi2 =     0.0056
+
+. *sts graph, fail by (anthcv)
+. stsum, by(anthcv)
+
+         failure _d:  gf == 2
+   analysis time _t:  (datevisit1-origin)/30.5
+             origin:  time dateop1
+                 id:  subjid
+
+         |               incidence       no. of    |------ Survival time -----|
+anthcv   | time at risk     rate        subjects        25%       50%       75%
+---------+---------------------------------------------------------------------
+1. posit |   1479.57377   .0060828            24    65.2459  91.90164         .
+2. negat |   22412.2623   .0020971           450   97.70492         .         .
+9. missi |  2085.803279   .0014383            26          .         .         .
+---------+---------------------------------------------------------------------
+   total |  25977.63934   .0022712           500   97.08197         .         .
+
+. stcox ib(2).anthcv, nolog
+
+         failure _d:  gf == 2
+   analysis time _t:  (datevisit1-origin)/30.5
+             origin:  time dateop1
+                 id:  subjid
+
+Cox regression -- no ties
+
+No. of subjects =          500                  Number of obs    =       4,872
+No. of failures =           59
+Time at risk    =  25977.63934
+                                                LR chi2(2)       =        7.87
+Log likelihood  =   -314.40312                  Prob > chi2      =      0.0196
+
+------------------------------------------------------------------------------
+          _t | Haz. Ratio   Std. Err.      z    P>|z|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+      anthcv |
+1. positive  |   2.763832     1.0075     2.79   0.005     1.352767    5.646772
+ 9. missing  |   .5568952   .3337271    -0.98   0.329     .1720597    1.802469
+------------------------------------------------------------------------------
+
+. 
+. * modee of dialysis
+. 
+. sts test mode
+
+         failure _d:  gf == 2
+   analysis time _t:  (datevisit1-origin)/30.5
+             origin:  time dateop1
+                 id:  subjid
+
+
+Log-rank test for equality of survivor functions
+
+               |   Events         Events
+mode           |  observed       expected
+---------------+-------------------------
+1. HD          |        53          50.11
+2. CAPD        |         5           7.27
+3. Pre-emptive |         1           1.50
+9. missing     |         0           0.12
+---------------+-------------------------
+Total          |        59          59.00
+
+                     chi2(3) =       1.17
+                     Pr>chi2 =     0.7606
+
+. *sts graph, fail by (mode)
+. 
+. * Dibetes
+. 
+. sts test diagdm
+
+         failure _d:  gf == 2
+   analysis time _t:  (datevisit1-origin)/30.5
+             origin:  time dateop1
+                 id:  subjid
+
+
+Log-rank test for equality of survivor functions
+
+       |   Events         Events
+diagdm |  observed       expected
+-------+-------------------------
+0. no  |        45          45.80
+1. yes |        11          10.20
+-------+-------------------------
+Total  |        56          56.00
+
+             chi2(1) =       0.08
+             Pr>chi2 =     0.7813
+
+. *sts graph, fail by (diagdm)
+. 
+. * hypertension
+. 
+. sts test hyper
+
+         failure _d:  gf == 2
+   analysis time _t:  (datevisit1-origin)/30.5
+             origin:  time dateop1
+                 id:  subjid
+
+
+Log-rank test for equality of survivor functions
+
+       |   Events         Events
+hyper  |  observed       expected
+-------+-------------------------
+0. no  |        15          36.63
+1. yes |        38          16.37
+-------+-------------------------
+Total  |        53          53.00
+
+             chi2(1) =      42.27
+             Pr>chi2 =     0.0000
+
+. *sts graph, fail by (hyper)
+. stsum, by(hyper)
+
+         failure _d:  gf == 2
+   analysis time _t:  (datevisit1-origin)/30.5
+             origin:  time dateop1
+                 id:  subjid
+
+         |               incidence       no. of    |------ Survival time -----|
+hyper    | time at risk     rate        subjects        25%       50%       75%
+---------+---------------------------------------------------------------------
+   0. no |  16741.27869    .000896           454          .         .         .
+  1. yes |   8247.47541   .0046075           375   74.39344  97.08197         .
+---------+---------------------------------------------------------------------
+   total |   24988.7541    .002121           496   97.70492         .         .
+
+. stcox i.hyper, nolog
+
+         failure _d:  gf == 2
+   analysis time _t:  (datevisit1-origin)/30.5
+             origin:  time dateop1
+                 id:  subjid
+
+Cox regression -- no ties
+
+No. of subjects =          496                  Number of obs    =       4,793
+No. of failures =           53
+Time at risk    =   24988.7541
+                                                LR chi2(1)       =       38.20
+Log likelihood  =   -263.92571                  Prob > chi2      =      0.0000
+
+------------------------------------------------------------------------------
+          _t | Haz. Ratio   Std. Err.      z    P>|z|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+       hyper |
+     1. yes  |   5.940506    1.83433     5.77   0.000     3.243295    10.88079
+------------------------------------------------------------------------------
+
+. 
+. * high chol
+. 
+. sts test highchol
+
+         failure _d:  gf == 2
+   analysis time _t:  (datevisit1-origin)/30.5
+             origin:  time dateop1
+                 id:  subjid
+
+
+Log-rank test for equality of survivor functions
+
+               |   Events         Events
+highchol       |  observed       expected
+---------------+-------------------------
+0. <240 mg/dl  |        33          42.36
+1. >=240 mg/dl |        19           9.64
+---------------+-------------------------
+Total          |        52          52.00
+
+                     chi2(1) =      11.91
+                     Pr>chi2 =     0.0006
+
+. *sts graph, fail by (highchol)
+. stsum, by(highchol)
+
+         failure _d:  gf == 2
+   analysis time _t:  (datevisit1-origin)/30.5
+             origin:  time dateop1
+                 id:  subjid
+
+         |               incidence       no. of    |------ Survival time -----|
+highchol | time at risk     rate        subjects        25%       50%       75%
+---------+---------------------------------------------------------------------
+ 0. <240 |  18975.11475   .0017391           458          .         .         .
+1. >=240 |   5316.95082   .0035735           324    75.7377  97.70492         .
+---------+---------------------------------------------------------------------
+   total |  24292.06557   .0021406           493   97.70492         .         .
+
+. stcox i.highchol, nolog
+
+         failure _d:  gf == 2
+   analysis time _t:  (datevisit1-origin)/30.5
+             origin:  time dateop1
+                 id:  subjid
+
+Cox regression -- no ties
+
+No. of subjects =          493                  Number of obs    =       4,287
+No. of failures =           52
+Time at risk    =  24292.06557
+                                                LR chi2(1)       =       10.05
+Log likelihood  =   -269.99322                  Prob > chi2      =      0.0015
+
+---------------------------------------------------------------------------------
+             _t | Haz. Ratio   Std. Err.      z    P>|z|     [95% Conf. Interval]
+----------------+----------------------------------------------------------------
+       highchol |
+1. >=240 mg/dl  |   2.739801   .8281296     3.33   0.001      1.51508    4.954529
+---------------------------------------------------------------------------------
+
+. 
+. * cyclosporin
+. 
+. sts test csa
+
+         failure _d:  gf == 2
+   analysis time _t:  (datevisit1-origin)/30.5
+             origin:  time dateop1
+                 id:  subjid
+
+
+Log-rank test for equality of survivor functions
+
+           |   Events         Events
+csa        |  observed       expected
+-----------+-------------------------
+1. yes     |        33          50.92
+2. no      |        23           4.96
+9. missing |         0           0.12
+-----------+-------------------------
+Total      |        56          56.00
+
+                 chi2(2) =      72.40
+                 Pr>chi2 =     0.0000
+
+. *sts graph, fail by (csa)
+. stsum, by(csa)
+
+         failure _d:  gf == 2
+   analysis time _t:  (datevisit1-origin)/30.5
+             origin:  time dateop1
+                 id:  subjid
+
+         |               incidence       no. of    |------ Survival time -----|
+csa      | time at risk     rate        subjects        25%       50%       75%
+---------+---------------------------------------------------------------------
+  1. yes |  23800.95082   .0013865           444          .         .         .
+   2. no |  2084.393443   .0110344           102   38.81967   82.2623  97.70492
+9. missi |   45.1147541          0             4          .         .         .
+---------+---------------------------------------------------------------------
+   total |  25930.45902   .0021596           497   97.70492         .         .
+
+. stcox i.csa, nolog
+
+         failure _d:  gf == 2
+   analysis time _t:  (datevisit1-origin)/30.5
+             origin:  time dateop1
+                 id:  subjid
+
+Cox regression -- no ties
+
+No. of subjects =          497                  Number of obs    =       4,865
+No. of failures =           56
+Time at risk    =  25930.45902
+                                                LR chi2(2)       =       42.31
+Log likelihood  =   -279.05216                  Prob > chi2      =      0.0000
+
+------------------------------------------------------------------------------
+          _t | Haz. Ratio   Std. Err.      z    P>|z|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+         csa |
+      2. no  |   7.309908   2.001893     7.26   0.000     4.273678    12.50323
+ 9. missing  |   6.87e-14   9.84e-07    -0.00   1.000            0           .
+------------------------------------------------------------------------------
+
+. 
+. * prednisolone
+. 
+. sts test pred
+
+         failure _d:  gf == 2
+   analysis time _t:  (datevisit1-origin)/30.5
+             origin:  time dateop1
+                 id:  subjid
+
+
+Log-rank test for equality of survivor functions
+
+           |   Events         Events
+pred       |  observed       expected
+-----------+-------------------------
+1. yes     |        49          46.14
+2. no      |         7           9.74
+9. missing |         0           0.12
+-----------+-------------------------
+Total      |        56          56.00
+
+                 chi2(2) =       1.12
+                 Pr>chi2 =     0.5699
+
+. *sts graph, fail by (pred)
+. 
+. * mmf
+. 
+. sts test mmf
+
+         failure _d:  gf == 2
+   analysis time _t:  (datevisit1-origin)/30.5
+             origin:  time dateop1
+                 id:  subjid
+
+
+Log-rank test for equality of survivor functions
+
+           |   Events         Events
+mmf        |  observed       expected
+-----------+-------------------------
+1. yes     |        11          16.35
+2. no      |        44          38.53
+9. missing |         0           0.12
+-----------+-------------------------
+Total      |        55          55.00
+
+                 chi2(2) =       2.65
+                 Pr>chi2 =     0.2656
+
+. *sts graph, fail by (mmf)
+. 
+. * cardil
+. 
+. sts test cardil
+
+         failure _d:  gf == 2
+   analysis time _t:  (datevisit1-origin)/30.5
+             origin:  time dateop1
+                 id:  subjid
+
+
+Log-rank test for equality of survivor functions
+
+           |   Events         Events
+cardil     |  observed       expected
+-----------+-------------------------
+1. yes     |        16          18.24
+2. no      |        40          37.55
+9. missing |         0           0.21
+-----------+-------------------------
+Total      |        56          56.00
+
+                 chi2(2) =       0.65
+                 Pr>chi2 =     0.7236
+
+. *sts graph, fail by (cardil)
+. 
+. **********
+. 
+. ** Multivariate
+. 
+. * Step 0
+. 
+. stcox i.hlamatch if hlamatch!=. & anthcv!=. & hyper!=. & highchol!=. & csa!=.
+
+         failure _d:  gf == 2
+   analysis time _t:  (datevisit1-origin)/30.5
+             origin:  time dateop1
+                 id:  subjid
+
+Iteration 0:   log likelihood = -249.32102
+Iteration 1:   log likelihood = -245.18283
+Iteration 2:   log likelihood = -244.37203
+Iteration 3:   log likelihood = -244.27685
+Iteration 4:   log likelihood = -244.27424
+Iteration 5:   log likelihood = -244.27423
+Refining estimates:
+Iteration 0:   log likelihood = -244.27423
+
+Cox regression -- no ties
+
+No. of subjects =          474                  Number of obs    =       4,071
+No. of failures =           48
+Time at risk    =  22269.14754
+                                                LR chi2(2)       =       10.09
+Log likelihood  =   -244.27423                  Prob > chi2      =      0.0064
+
+-----------------------------------------------------------------------------------
+               _t | Haz. Ratio   Std. Err.      z    P>|z|     [95% Conf. Interval]
+------------------+----------------------------------------------------------------
+         hlamatch |
+2. One haplotype  |   9.285686    9.47217     2.18   0.029     1.257528    68.56621
+   3. Miss match  |   8.024619   8.215792     2.03   0.042     1.078809    59.69038
+-----------------------------------------------------------------------------------
+
+. stcox i.anthcv if hlamatch!=. & anthcv!=. & hyper!=. & highchol!=. & csa!=.
+
+         failure _d:  gf == 2
+   analysis time _t:  (datevisit1-origin)/30.5
+             origin:  time dateop1
+                 id:  subjid
+
+Iteration 0:   log likelihood = -249.32102
+Iteration 1:   log likelihood = -243.91745
+Iteration 2:   log likelihood = -243.72165
+Iteration 3:   log likelihood = -243.71774
+Iteration 4:   log likelihood = -243.71774
+Refining estimates:
+Iteration 0:   log likelihood = -243.71774
+
+Cox regression -- no ties
+
+No. of subjects =          474                  Number of obs    =       4,071
+No. of failures =           48
+Time at risk    =  22269.14754
+                                                LR chi2(2)       =       11.21
+Log likelihood  =   -243.71774                  Prob > chi2      =      0.0037
+
+------------------------------------------------------------------------------
+          _t | Haz. Ratio   Std. Err.      z    P>|z|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+      anthcv |
+2. negative  |   .2598452   .0967667    -3.62   0.000     .1252351    .5391421
+ 9. missing  |   .1426685   .1123272    -2.47   0.013     .0304896    .6675823
+------------------------------------------------------------------------------
+
+. stcox i.hyper if hlamatch!=. & anthcv!=. & hyper!=. & highchol!=. & csa!=.
+
+         failure _d:  gf == 2
+   analysis time _t:  (datevisit1-origin)/30.5
+             origin:  time dateop1
+                 id:  subjid
+
+Iteration 0:   log likelihood = -249.32102
+Iteration 1:   log likelihood = -230.43609
+Iteration 2:   log likelihood = -230.25831
+Iteration 3:   log likelihood = -230.25784
+Refining estimates:
+Iteration 0:   log likelihood = -230.25784
+
+Cox regression -- no ties
+
+No. of subjects =          474                  Number of obs    =       4,071
+No. of failures =           48
+Time at risk    =  22269.14754
+                                                LR chi2(1)       =       38.13
+Log likelihood  =   -230.25784                  Prob > chi2      =      0.0000
+
+------------------------------------------------------------------------------
+          _t | Haz. Ratio   Std. Err.      z    P>|z|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+       hyper |
+     1. yes  |   6.519433   2.139435     5.71   0.000     3.426708    12.40345
+------------------------------------------------------------------------------
+
+. stcox i.highchol if hlamatch!=. & anthcv!=. & hyper!=. & highchol!=. & csa!=.
+
+         failure _d:  gf == 2
+   analysis time _t:  (datevisit1-origin)/30.5
+             origin:  time dateop1
+                 id:  subjid
+
+Iteration 0:   log likelihood = -249.32102
+Iteration 1:   log likelihood = -243.70391
+Iteration 2:   log likelihood = -243.10815
+Iteration 3:   log likelihood = -243.10802
+Refining estimates:
+Iteration 0:   log likelihood = -243.10802
+
+Cox regression -- no ties
+
+No. of subjects =          474                  Number of obs    =       4,071
+No. of failures =           48
+Time at risk    =  22269.14754
+                                                LR chi2(1)       =       12.43
+Log likelihood  =   -243.10802                  Prob > chi2      =      0.0004
+
+---------------------------------------------------------------------------------
+             _t | Haz. Ratio   Std. Err.      z    P>|z|     [95% Conf. Interval]
+----------------+----------------------------------------------------------------
+       highchol |
+1. >=240 mg/dl  |    3.16025   .9810569     3.71   0.000     1.719798    5.807182
+---------------------------------------------------------------------------------
+
+. stcox i.csa if hlamatch!=. & anthcv!=. & hyper!=. & highchol!=. & csa!=.
+
+         failure _d:  gf == 2
+   analysis time _t:  (datevisit1-origin)/30.5
+             origin:  time dateop1
+                 id:  subjid
+
+Iteration 0:   log likelihood = -249.32102
+Iteration 1:   log likelihood = -234.72547
+Iteration 2:   log likelihood = -234.68895
+Iteration 3:   log likelihood = -234.68826
+Iteration 4:   log likelihood = -234.68801
+Iteration 5:   log likelihood = -234.68792
+Iteration 6:   log likelihood = -234.68789
+Iteration 7:   log likelihood = -234.68787
+Iteration 8:   log likelihood = -234.68787
+Iteration 9:   log likelihood = -234.68787
+Iteration 10:  log likelihood = -234.68787
+Iteration 11:  log likelihood = -234.68787
+Iteration 12:  log likelihood = -234.68787
+Iteration 13:  log likelihood = -234.68787
+Iteration 14:  log likelihood = -234.68787
+Iteration 15:  log likelihood = -234.68787
+Iteration 16:  log likelihood = -234.68787
+Iteration 17:  log likelihood = -234.68787
+Iteration 18:  log likelihood = -234.68787
+Iteration 19:  log likelihood = -234.68787
+Iteration 20:  log likelihood = -234.68787
+Iteration 21:  log likelihood = -234.68787
+Iteration 22:  log likelihood = -234.68787
+Iteration 23:  log likelihood = -234.68787
+Iteration 24:  log likelihood = -234.68787
+Iteration 25:  log likelihood = -234.68787
+Iteration 26:  log likelihood = -234.68787
+Iteration 27:  log likelihood = -234.68787
+Refining estimates:
+Iteration 0:   log likelihood = -234.68787
+Iteration 1:   log likelihood = -234.68787
+
+Cox regression -- no ties
+
+No. of subjects =          474                  Number of obs    =       4,071
+No. of failures =           48
+Time at risk    =  22269.14754
+                                                LR chi2(2)       =       29.27
+Log likelihood  =   -234.68787                  Prob > chi2      =      0.0000
+
+------------------------------------------------------------------------------
+          _t | Haz. Ratio   Std. Err.      z    P>|z|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+         csa |
+      2. no  |   6.261605   1.891969     6.07   0.000     3.463313    11.32087
+ 9. missing  |   1.36e-12   .0000183    -0.00   1.000            0           .
+------------------------------------------------------------------------------
+
+. 
+. * Step 1
+. 
+. qui : stcox i.hyper if hlamatch!=. & anthcv!=. & hyper!=. & highchol!=. & csa!=.
+
+. est store A
+
+. 
+. qui : stcox i.hyper i.hlamatch if hlamatch!=. & anthcv!=. & hyper!=. & highchol!=. & csa!=.
+
+. est store B 
+
+. lrtest A B
+
+Likelihood-ratio test                                 LR chi2(2)  =      8.43
+(Assumption: A nested in B)                           Prob > chi2 =    0.0148
+
+. 
+. qui : stcox i.hyper i.anthcv if hlamatch!=. & anthcv!=. & hyper!=. & highchol!=. & csa!=.
+
+. est store C
+
+. lrtest A C
+
+Likelihood-ratio test                                 LR chi2(2)  =     10.44
+(Assumption: A nested in C)                           Prob > chi2 =    0.0054
+
+. 
+. qui : stcox i.hyper i.highchol if hlamatch!=. & anthcv!=. & hyper!=. & highchol!=. & csa!=.
+
+. est store D
+
+. lrtest A D
+
+Likelihood-ratio test                                 LR chi2(1)  =      7.63
+(Assumption: A nested in D)                           Prob > chi2 =    0.0057
+
+. 
+. qui : stcox i.hyper i.csa if hlamatch!=. & anthcv!=. & hyper!=. & highchol!=. & csa!=.
+
+. est store E
+
+. lrtest A E
+
+Likelihood-ratio test                                 LR chi2(2)  =     29.01
+(Assumption: A nested in E)                           Prob > chi2 =    0.0000
+
+. 
+. * step 2
+. 
+. qui : stcox i.hyper i.csa i.hlamatch if hlamatch!=. & anthcv!=. & hyper!=. & highchol!=. & csa!=.
+
+. est store B1
+
+. lrtest E B1
+
+Likelihood-ratio test                                 LR chi2(1)  =      8.25
+(Assumption: E nested in B1)                          Prob > chi2 =    0.0041
+
+. 
+. qui : stcox i.hyper i.csa i.anthcv if hlamatch!=. & anthcv!=. & hyper!=. & highchol!=. & csa!=.
+
+. est store C1
+
+. lrtest E C1
+
+Likelihood-ratio test                                 LR chi2(2)  =      4.61
+(Assumption: E nested in C1)                          Prob > chi2 =    0.1000
+
+. 
+. qui : stcox i.hyper i.csa i.highchol if hlamatch!=. & anthcv!=. & hyper!=. & highchol!=. & csa!=.
+
+. est store D1 
+
+. lrtest E D1
+df(unrestricted) = df(restricted) = 3
+r(498);
+
+end of do-file
+
+r(498);
+
+. do "/var/folders/s9/1_58_r7d14q02tq0nct3crv00000gn/T//SD80466.000000"
+
+. * Step 3
+. 
+. qui : stcox i.hyper i.csa i.highchol i.hlamatch if hlamatch!=. & anthcv!=. & hyper!=. & highchol!=. & csa!=.
+
+. est store B2
+
+. 
+. qui : stcox i.hyper i.csa i.highchol i.hlamatch  i.anthcv if hlamatch!=. & anthcv!=. & hyper!=. & highchol!=. & csa!=
+> .
+
+. est store C2
+
+. lrtest B2 C2
+
+Likelihood-ratio test                                 LR chi2(2)  =      5.73
+(Assumption: B2 nested in C2)                         Prob > chi2 =    0.0571
+
+. 
+. * final model
+. 
+. stcox i.hyper i.csa i.highchol i.hlamatch if hlamatch!=. & anthcv!=. & hyper!=. & highchol!=. & csa!=.
+
+         failure _d:  gf == 2
+   analysis time _t:  (datevisit1-origin)/30.5
+             origin:  time dateop1
+                 id:  subjid
+
+Iteration 0:   log likelihood = -249.32102
+Iteration 1:   log likelihood = -223.28524
+Iteration 2:   log likelihood = -207.67547
+Iteration 3:   log likelihood = -206.97112
+Iteration 4:   log likelihood = -206.96807
+Iteration 5:   log likelihood = -206.96806
+Iteration 6:   log likelihood = -206.96805
+Iteration 7:   log likelihood = -206.96805
+Iteration 8:   log likelihood = -206.96805
+Iteration 9:   log likelihood = -206.96805
+Iteration 10:  log likelihood = -206.96805
+Iteration 11:  log likelihood = -206.96805
+Iteration 12:  log likelihood = -206.96805
+Iteration 13:  log likelihood = -206.96805
+Iteration 14:  log likelihood = -206.96805
+Iteration 15:  log likelihood = -206.96805
+Iteration 16:  log likelihood = -206.96805
+Iteration 17:  log likelihood = -206.96805
+Iteration 18:  log likelihood = -206.96805
+Iteration 19:  log likelihood = -206.96805
+Iteration 20:  log likelihood = -206.96805
+Iteration 21:  log likelihood = -206.96805
+Iteration 22:  log likelihood = -206.96805
+Iteration 23:  log likelihood = -206.96805
+Iteration 24:  log likelihood = -206.96805
+Iteration 25:  log likelihood = -206.96805
+Iteration 26:  log likelihood = -206.96805
+Iteration 27:  log likelihood = -206.96805
+Iteration 28:  log likelihood = -206.96805
+Iteration 29:  log likelihood = -206.96805
+Iteration 30:  log likelihood = -206.96805
+Iteration 31:  log likelihood = -206.96805
+Iteration 32:  log likelihood = -206.96805
+Iteration 33:  log likelihood = -206.96805
+Iteration 34:  log likelihood = -206.96805
+Iteration 35:  log likelihood = -206.96805
+Iteration 36:  log likelihood = -206.96805
+Refining estimates:
+Iteration 0:   log likelihood = -206.96805
+Iteration 1:   log likelihood = -206.96805
+
+Cox regression -- no ties
+
+No. of subjects =          474                  Number of obs    =       4,071
+No. of failures =           48
+Time at risk    =  22269.14754
+                                                LR chi2(5)       =       84.71
+Log likelihood  =   -206.96805                  Prob > chi2      =      0.0000
+
+-----------------------------------------------------------------------------------
+               _t | Haz. Ratio   Std. Err.      z    P>|z|     [95% Conf. Interval]
+------------------+----------------------------------------------------------------
+            hyper |
+          1. yes  |    5.54144   1.846136     5.14   0.000     2.884324    10.64636
+                  |
+              csa |
+           2. no  |   6.811098   2.150924     6.08   0.000     3.667839    12.64806
+      9. missing  |   2.22e-18          .        .       .            .           .
+                  |
+         highchol |
+  1. >=240 mg/dl  |   2.737481   .8720136     3.16   0.002     1.466237    5.110907
+                  |
+         hlamatch |
+2. One haplotype  |   8.370519   8.556532     2.08   0.038     1.128847    62.06827
+   3. Miss match  |   5.625254   5.787593     1.68   0.093      .748817    42.25796
+-----------------------------------------------------------------------------------
+
+. 
+. 
+. * Assumptions 
+. *1. Plotting scaled schoenfeld residual versus function time 
+. 
+. estat phtest,plot(1.hyper) log
+
+. 
+. estat phtest,plot(2.csa) log
+
+. 
+. estat phtest,plot(1.highchol) log
+
+.                                            
+. estat phtest,plot(2.hlamatch) log
+
+. estat phtest,plot(3.hlamatch) log
+
+. 
+. *2. log log plot
+. 
+. stphplot,by(hyper)
+
+         failure _d:  gf == 2
+   analysis time _t:  (datevisit1-origin)/30.5
+             origin:  time dateop1
+                 id:  subjid
+
+. stphplot,by(csa)
+
+         failure _d:  gf == 2
+   analysis time _t:  (datevisit1-origin)/30.5
+             origin:  time dateop1
+                 id:  subjid
+
+. stphplot,by(highchol)
+
+         failure _d:  gf == 2
+   analysis time _t:  (datevisit1-origin)/30.5
+             origin:  time dateop1
+                 id:  subjid
+
+. stphplot,by(hlamatch)
+
+         failure _d:  gf == 2
+   analysis time _t:  (datevisit1-origin)/30.5
+             origin:  time dateop1
+                 id:  subjid
+
+. 
+. *3. Statistical test
+. 
+. qui: stcox i.hyper i.csa i.highchol i.hlamatch if hlamatch!=. & anthcv!=. & hyper!=. & highchol!=. & csa!=., nolog
+
+. estat phtest,d
+
+      Test of proportional-hazards assumption
+
+      Time:  Time
+      ----------------------------------------------------------------
+                  |       rho            chi2       df       Prob>chi2
+      ------------+---------------------------------------------------
+      0b.hyper    |            .            .        1             .
+      1.hyper     |     -0.22816         2.20        1         0.1384
+      1b.csa      |            .            .        1             .
+      2.csa       |      0.12785         0.83        1         0.3608
+      9.csa       |            .            .        1             .
+      0b.highchol |            .            .        1             .
+      1.highchol  |      0.16769         1.45        1         0.2280
+      1b.hlamatch |            .            .        1             .
+      2.hlamatch  |     -0.06231         0.19        1         0.6619
+      3.hlamatch  |     -0.07055         0.24        1         0.6237
+      ------------+---------------------------------------------------
+      global test |                      4.35        5         0.5004
+      ----------------------------------------------------------------
+
+. 
+. *4. Assess goodness of fit
+. 
+. predict cs,csnell
+(4,441 missing values generated)
+
+. stset cs,failure(gf==2)
+
+     failure event:  gf == 2
+obs. time interval:  (0, cs]
+ exit on or before:  failure
+
+------------------------------------------------------------------------------
+      4,915  total observations
+      4,441  event time missing (cs>=.)                         PROBABLE ERROR
+         34  observations end on or before enter()
+------------------------------------------------------------------------------
+        440  observations remaining, representing
+         48  failures in single-record/single-failure data
+         48  total analysis time at risk and under observation
+                                                at risk from t =         0
+                                     earliest observed entry t =         0
+                                          last observed exit t =  1.804922
+
+. sts gen surfunc=s
+
+. list cs _st _d _t _t0 surfunc in 1/10
+
+     +--------------------------------------------------+
+     |       cs   _st   _d          _t   _t0    surfunc |
+     |--------------------------------------------------|
+  1. |        .     0    .           .     .          . |
+  2. |        .     0    .           .     .          . |
+  3. |        .     0    .           .     .          . |
+  4. |        .     0    .           .     .          . |
+  5. |        .     0    .           .     .          . |
+     |--------------------------------------------------|
+  6. |        .     0    .           .     .          . |
+  7. |        .     0    .           .     .          . |
+  8. | .0197829     1    0   .01978286     0   .9894546 |
+  9. |        .     0    .           .     .          . |
+ 10. |        .     0    .           .     .          . |
+     +--------------------------------------------------+
+
+. gen Ht=-ln(surfunc)
+(4,476 missing values generated)
+
+. list cs _st _d _t _t0 surfunc Ht in 1/10
+
+     +-------------------------------------------------------------+
+     |       cs   _st   _d          _t   _t0    surfunc         Ht |
+     |-------------------------------------------------------------|
+  1. |        .     0    .           .     .          .          . |
+  2. |        .     0    .           .     .          .          . |
+  3. |        .     0    .           .     .          .          . |
+  4. |        .     0    .           .     .          .          . |
+  5. |        .     0    .           .     .          .          . |
+     |-------------------------------------------------------------|
+  6. |        .     0    .           .     .          .          . |
+  7. |        .     0    .           .     .          .          . |
+  8. | .0197829     1    0   .01978286     0   .9894546   .0106014 |
+  9. |        .     0    .           .     .          .          . |
+ 10. |        .     0    .           .     .          .          . |
+     +-------------------------------------------------------------+
+
+. twoway (line Ht cs, sort lcolor(dkgreen)) (line cs cs, sort lpattern(dash))
+
+. 
+. *5. Identify outliers by deviance
+. qui: stcox i.hyper i.csa i.highchol i.hlamatch if hlamatch!=. & anthcv!=. & hyper!=. & highchol!=. & csa!=., nolog
+
+. predict dv,deviance
+(4,488 missing values generated)
+
+. predict xb,xb
+(810 missing values generated)
+
+. scatter dv xb,yline(0) sort mlabel(subjid)
+
+. 
+. *6. Detect influence outliers cases on coefficient
+. xi: stcox i.hyper i.csa i.highchol i.hlamatch if hlamatch!=. & anthcv!=. & hyper!=. & highchol!=. & csa!=., esr(esr*)
+i.hyper           _Ihyper_0-1         (naturally coded; _Ihyper_0 omitted)
+i.csa             _Icsa_1-9           (naturally coded; _Icsa_1 omitted)
+i.highchol        _Ihighchol_0-1      (naturally coded; _Ihighchol_0 omitted)
+i.hlamatch        _Ihlamatch_1-3      (naturally coded; _Ihlamatch_1 omitted)
+
+         failure _d:  gf == 2
+   analysis time _t:  cs
+
+note: _Icsa_9 omitted because of collinearity
+Iteration 0:   log likelihood = -199.25063
+Iteration 1:   log likelihood = -192.34392
+Iteration 2:   log likelihood = -192.12094
+Iteration 3:   log likelihood = -192.12084
+Iteration 4:   log likelihood = -192.12084
+Refining estimates:
+Iteration 0:   log likelihood = -192.12084
+
+Cox regression -- no ties
+
+No. of subjects =          440                  Number of obs    =         440
+No. of failures =           48
+Time at risk    =  48.00000004
+                                                LR chi2(5)       =       14.26
+Log likelihood  =   -192.12084                  Prob > chi2      =      0.0140
+
+------------------------------------------------------------------------------
+          _t | Haz. Ratio   Std. Err.      z    P>|z|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+   _Ihyper_1 |   1.939011   .6739038     1.91   0.057     .9811713    3.831912
+     _Icsa_2 |   .5334088   .2182135    -1.54   0.124     .2392434     1.18927
+     _Icsa_9 |          1  (omitted)
+_Ihighchol_1 |    2.21061   .6853365     2.56   0.011     1.203986    4.058849
+_Ihlamatch_2 |   .9736186   1.020527    -0.03   0.980     .1247892    7.596278
+_Ihlamatch_3 |   .8873943   .9285725    -0.11   0.909     .1141343    6.899489
+------------------------------------------------------------------------------
+
+. mat list e(V)
+
+symmetric e(V)[6,6]
+                                                     o.                                          
+                 _Ihyper_1       _Icsa_2       _Icsa_9  _Ihighchol_1  _Ihlamatch_2  _Ihlamatch_3
+   _Ihyper_1     .12079122
+     _Icsa_2     .00100104     .16735668
+   o._Icsa_9             0             0             0
+_Ihighchol_1    -.01727868    -.00312792             0     .09611328
+_Ihlamatch_2     .01802947     .01005994             0     .02929642     1.0986802
+_Ihlamatch_3     .00069599    -.02374591             0     .01448466     1.0457542     1.0949604
+
+. mkmat esr1 esr2 esr3 esr4 esr5 esr6 ,matrix(esr)
+
+. mat V=e(V)
+
+. mat dfbeta=esr*V
+
+. svmat dfbeta,names(s)
+
+. label var s1 "Hypertension-positive"
+
+. label var s2 "no-cyclosporin"
+
+. label var s3 "missing-cyclosporin"
+
+. label var s4 "high-cholestrol"
+
+. label var s5 "hla-match-one-haplotype"
+
+. label var s6 "hla-mismatch"
+
+. 
+. sum s1,d
+
+                    Hypertension-positive
+-------------------------------------------------------------
+      Percentiles      Smallest
+ 1%    -.0715521      -.0882618
+ 5%    -.0202374      -.0867021
+10%    -.0082473      -.0797422       Obs                 440
+25%    -.0007023      -.0754315       Sum of Wgt.         440
+
+50%     .0003603                      Mean           9.00e-12
+                        Largest       Std. Dev.      .0164503
+75%     .0025505       .0536623
+90%     .0075142       .0541975       Variance       .0002706
+95%       .02173        .056611       Skewness      -1.665996
+99%     .0520996       .0584659       Kurtosis       13.64383
+
+. disp r(mean)+(3*r(sd))
+.04935087
+
+. disp r(mean)-(3*r(sd))
+-.04935087
+
+. scatter s1 _t,yline(-.04935087 0 .04935087) mlabel(subjid)
+
+. 
+. sum s2,d
+
+                       no-cyclosporin
+-------------------------------------------------------------
+      Percentiles      Smallest
+ 1%      -.06084      -.0690342
+ 5%    -.0345207      -.0683664
+10%    -.0100986      -.0683664       Obs                 440
+25%     5.23e-07      -.0614411       Sum of Wgt.         440
+
+50%     .0001933                      Mean          -2.40e-11
+                        Largest       Std. Dev.      .0193808
+75%     .0012721       .1153033
+90%     .0056622       .1293826       Variance       .0003756
+95%     .0123696       .1355232       Skewness       2.613927
+99%     .0773529       .1443268       Kurtosis       24.56168
+
+. disp r(mean)+(3*r(sd))
+.05814241
+
+. disp r(mean)-(3*r(sd))
+-.05814241
+
+. scatter s2 _t,yline(-.05814241 0 .05814241) mlabel(subjid)
+
+. 
+. sum s4,d
+
+                       high-cholestrol
+-------------------------------------------------------------
+      Percentiles      Smallest
+ 1%    -.0461807      -.0747659
+ 5%    -.0274983      -.0596941
+10%    -.0081895      -.0479228       Obs                 440
+25%     .0000404      -.0465788       Sum of Wgt.         440
+
+50%     .0003414                      Mean          -6.96e-12
+                        Largest       Std. Dev.      .0138477
+75%     .0016353       .0526696
+90%      .005423       .0535383       Variance       .0001918
+95%     .0162203        .054353       Skewness      -.1745895
+99%     .0526193       .0574573       Kurtosis       10.91081
+
+. disp r(mean)+(3*r(sd))
+.04154308
+
+. disp r(mean)-(3*r(sd))
+-.04154308
+
+. scatter s4 _t,yline(-.04154308 0 .04154308) mlabel(subjid)
+
+. 
+. sum s5,d
+
+                   hla-match-one-haplotype
+-------------------------------------------------------------
+      Percentiles      Smallest
+ 1%    -.0311233      -.9518882
+ 5%    -.0128513      -.0476228
+10%    -.0066789      -.0473125       Obs                 440
+25%    -.0017269      -.0435232       Sum of Wgt.         440
+
+50%    -.0004259                      Mean          -6.74e-11
+                        Largest       Std. Dev.      .0522345
+75%     .0003311       .0726797
+90%      .007474       .0812763       Variance       .0027284
+95%     .0258865       .0890182       Skewness      -12.18745
+99%     .0679272       .4608963       Kurtosis       265.7021
+
+. disp r(mean)+(3*r(sd))
+.15670351
+
+. disp r(mean)-(3*r(sd))
+-.15670351
+
+. scatter s5 _t,yline(-.15670351 0 .15670351) mlabel(subjid)
+
+. 
+. sum s6,d
+
+                        hla-mismatch
+-------------------------------------------------------------
+      Percentiles      Smallest
+ 1%    -.0331811      -.9514158
+ 5%    -.0126704      -.0440122
+10%    -.0063904      -.0409806       Obs                 440
+25%    -.0022189      -.0384354       Sum of Wgt.         440
+
+50%    -.0007456                      Mean           5.62e-11
+                        Largest       Std. Dev.      .0529462
+75%            0       .1063362
+90%     .0073267       .1315761       Variance       .0028033
+95%     .0217105       .1547027       Skewness      -11.58627
+99%     .0641268         .46184       Kurtosis       251.5877
+
+. disp r(mean)+(3*r(sd))
+.15883871
+
+. disp r(mean)-(3*r(sd))
+-.15883871
+
+. scatter s6 _t,yline(-.15883871 0 .15883871) mlabel(subjid)
+
+. 
+end of do-file
+
+. log close
+      name:  <unnamed>
+       log:  /Users/hteza/Desktop/Class/RACE626/Assignment_2_SA/Assignment II/To_submit/survival_analysis.log
+  log type:  text
+ closed on:  15 Mar 2020, 20:43:39
+-----------------------------------------------------------------------------------------------------------------------
